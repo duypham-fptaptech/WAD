@@ -11,17 +11,11 @@ namespace BookMvc.Models
     public class Books
     {
         public int Id { get; set; }
-
-        [StringLength(60, MinimumLength = 3)]
-        [Required]
         public string Title { get; set; }
-        [StringLength(20, MinimumLength = 3)]
-        [Required]
-        public string Author { get; set; }
-        [Required]
 
-        public string Category { get; set; }
-        [Required]
+        [DataType(DataType.Date)]
+        public DateTime ReleaseDate { get; set; }
+        public string Genre { get; set; }
         public decimal Price { get; set; }
     }
 }
